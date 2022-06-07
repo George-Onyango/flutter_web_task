@@ -8,8 +8,10 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: SizedBox(
         child: Column(
-          children: [
-            Container(),
+          children: const [
+            SizedBox(
+              child: Text("jiji"),
+            ),
           ],
         ),
       ),
