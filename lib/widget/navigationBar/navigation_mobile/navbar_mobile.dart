@@ -7,18 +7,18 @@ class NavigationBarMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 80,
+      height: 50,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          const NavBarLogo(),
           IconButton(
             onPressed: () {},
             icon: const Icon(
               Icons.menu,
             ),
           ),
-          const NavBarLogo(),
         ],
       ),
     );

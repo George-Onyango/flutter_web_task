@@ -33,7 +33,6 @@ class HomeViewDesktop extends StatelessWidget {
           controller: pageViewController,
           children: [
             Container(
-              height: 1000,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -209,7 +208,7 @@ class HomeViewDesktop extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 100,
+                            height: 150,
                           ),
                           MaterialButton(
                             height: 70,
@@ -219,7 +218,7 @@ class HomeViewDesktop extends StatelessWidget {
                                 duration: const Duration(milliseconds: 300),
                                 curve: Curves.easeIn),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 120.0),
+                              padding: const EdgeInsets.only(left: 150.0),
                               child: Row(
                                 children: const [
                                   Align(
