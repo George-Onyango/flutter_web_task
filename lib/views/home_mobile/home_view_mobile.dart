@@ -226,7 +226,7 @@ class HomeViewMobile extends StatelessWidget {
                                       const Duration(milliseconds: 300),
                                   curve: Curves.easeIn),
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 150.0),
+                                padding: const EdgeInsets.only(left: 100.0),
                                 child: Row(
                                   children: const [
                                     Align(
@@ -491,7 +491,7 @@ class HomeViewMobile extends StatelessWidget {
                                 color: kPrimary,
                                 shape: const StadiumBorder(),
                                 child: Padding(
-                                  padding: const EdgeInsets.only(left: 150.0),
+                                  padding: const EdgeInsets.only(left: 100.0),
                                   child: Row(
                                     children: const [
                                       Align(

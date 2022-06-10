@@ -13,10 +13,13 @@ class NavigationBarMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const NavBarLogo(),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.menu,
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.menu,
+              ),
             ),
           ),
         ],
