@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:random_task/constants/constants.dart';
 
-class NavigationBarList extends StatefulWidget {
-  const NavigationBarList({Key? key}) : super(key: key);
+import '../../../constants/constants.dart';
+import '../nav_bar_logo.dart';
+import '../navbar_items.dart';
 
-  @override
-  State<NavigationBarList> createState() => _NavigationBarListState();
-}
-
-class _NavigationBarListState extends State<NavigationBarList> {
-  // String dropdownValue = 'Business';
-
-  var itemsList = ['Business','Products', 'Case Studies'];
+class NavigationBarDesktop extends StatelessWidget {
+  const NavigationBarDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +20,23 @@ class _NavigationBarListState extends State<NavigationBarList> {
               width: 400,
               child: Row(
                 children: [
-                  SizedBox(
-                  child: Image.asset('assets/logo/mockup.png',fit: BoxFit.cover,)),
+                  const NavBarLogo(),
                   const SizedBox(
                     width: 20,
                   ),
-                  Text("Buy Crypto",style: navbarText,),
+                  Text(
+                    "Buy Crypto",
+                    style: navbarText,
+                  ),
                   const SizedBox(
                     width: 20,
                   ),
                   Row(
                     children: [
-                      Text("Business",style: navbarText,),
+                      Text(
+                        "Business",
+                        style: navbarText,
+                      ),
                       // const SizedBox(width: .5,),
                       const Icon(Icons.arrow_drop_down)
                     ],
@@ -59,22 +58,23 @@ class _NavigationBarListState extends State<NavigationBarList> {
             ),
             const Spacer(),
             Row(
+              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                _NavBarItem(title: 'About Us'),
-                const SizedBox(
+              children: const [
+                NavBarItem(title: 'About Us'),
+                SizedBox(
                   width: 30,
                 ),
-                _NavBarItem(title: 'Careers'),
-                const SizedBox(
+                NavBarItem(title: 'Careers'),
+                SizedBox(
                   width: 30,
                 ),
-                _NavBarItem(title: 'Blog'),
-                const SizedBox(
+                NavBarItem(title: 'Blog'),
+                SizedBox(
                   width: 30,
                 ),
-                _NavBarItem(title: 'Help Center'),
-                const SizedBox(
+                NavBarItem(title: 'Help Center'),
+                SizedBox(
                   width: 30,
                 ),
               ],
@@ -82,19 +82,6 @@ class _NavigationBarListState extends State<NavigationBarList> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class _NavBarItem extends StatelessWidget {
-  final String title;
-  _NavBarItem({Key? key, required this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: navbarText,
     );
   }
 }
